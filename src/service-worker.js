@@ -72,7 +72,7 @@ self.addEventListener('message', (event) => {
 
 // Any other custom service worker logic can go here.
 
-const version = 'tasks-v1.0'
+const version = 'tasks-v1.2'
 
 self.addEventListener('install', (event) => {
   console.log(`>>> Version ${version} instalada`)
@@ -83,8 +83,9 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('push', (event) => {
-  self.registration.showNotification('Notificacion Recibida', {
-    body: 'Notificación estandar recivida'
+  const { title, message } = event.data.json()
+  self.registration.showNotification(title, {
+    body: message
   })
   console.log(`>>> Version ${version} activada`)
 })
