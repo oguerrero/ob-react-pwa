@@ -1,17 +1,22 @@
 import './App.css'
-import AxiosCRUDExample from './components/pure/axiosCRUDExample'
-import NotificationManager from './components/pure/NotificationManager'
+import Todo from './test/components/Todo'
 
 function App() {
-    return (
-        <div className='App'>
-            <NotificationManager />
-            <AxiosCRUDExample />
+  const todosList = {
+    id: 1,
+    text: 'Primer tarea',
+    completed: false
+  }
+  return (
+    <div className='App'>
+      <Todo todo={todosList} />
+      {/* <NotificationManager />
+            <AxiosCRUDExample /> */}
 
-            {/* PROYECTO FINAL */}
-            {/* <TaskListComponent />  */}
-        </div>
-    )
+      {/* PROYECTO FINAL */}
+      {/* <TaskListComponent />  */}
+    </div>
+  )
 }
 
 export default App
