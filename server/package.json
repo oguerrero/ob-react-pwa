@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "static server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "static",
+    "push-notifications"
+  ],
+  "author": "@oguerrero",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "espress": "^0.0.0"
+  }
+}
